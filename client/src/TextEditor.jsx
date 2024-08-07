@@ -38,7 +38,7 @@ const TextEditor = () => {
    
    
   useEffect(() => {
-    const s = io("http://localhost:4000",{transports: ['websocket'],})
+    const s = io("https://muhandwork.onrender.com",{transports: ['websocket'],})
      setSocket(s)
      
      return () => {
@@ -196,7 +196,7 @@ wrapper.innerHTML =""
     
   const createSelect = async()=>{
     try{
-      const res = await fetch(`http://localhost:4000/api/select/sele`,{
+      const res = await fetch("https://muhandwork.onrender.com/api/select/sele",{
         credentials: "include",
       method:"POST",
      

@@ -13,7 +13,7 @@ const CommentScroll = () => {
 
         try{
       
-        const res = await fetch("http://localhost:4000/api/coment/getcoment",{
+        const res = await fetch("https://muhandwork.onrender.com/api/coment/getcoment",{
           credentials: "include",
           
             method:"GET",

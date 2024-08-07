@@ -37,7 +37,7 @@ const Coment = ({newpo,setNewpo}) => {
     }
      
     try{
-     const res = await fetch(`http://localhost:4000/api/coment/create`,{
+     const res = await fetch(`https://muhandwork.onrender.com/api/coment/create`,{
        credentials: "include",
      method:"POST",
     
@@ -67,7 +67,7 @@ const Coment = ({newpo,setNewpo}) => {
   
   const handleClick = async() => {
     try{
-      const res = await fetch(`http://localhost:4000/api/select/${newpo._id}`,{
+      const res = await fetch(`https://muhandwork.onrender.com/api/select/${newpo._id}`,{
         credentials: "include",
         method:"DELETE",
       })
@@ -184,7 +184,7 @@ return (
   
   
   
-   <div className="w-[330px] mt-[30px] ">
+   <div className="w-[330px] mt-[10px] ">
   
 
    
