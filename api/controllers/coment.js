@@ -2,18 +2,15 @@ import Comment from "../models/coment.js"
 
 
 
-export const createComent =async (req,res,next) => {
+export const createComent =async (req,res) => {
 
     try{
    
-        const{content,postId,userId,username,profilePicture} = req.body 
+        const{content,userId,username,profilePicture} = req.body 
 
-        if(userId !== req.user.id){
-           console.log("error")
-        }
+        
 
-
-     const Newcoment = new Comment({content,postId,userId,username,profilePicture})
+     const Newcoment = new Comment({content,userId,username,profilePicture})
     
       await Newcoment.save()
 
@@ -28,7 +25,7 @@ export const createComent =async (req,res,next) => {
     
     }
     catch(error){
-        next(error)
+        console.log(error)
     }
  } 
 
