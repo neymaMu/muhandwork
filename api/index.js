@@ -16,7 +16,7 @@ import SelecUser from './routes/select.js'
 import path from 'path'
 
 
-
+const server = http.createServer(app);
 
 const app = express()
 
@@ -35,6 +35,9 @@ mongoose.connect("mongodb+srv://j4116507:0JWcQEPTfu0yxQxP@cluster0.nfqnxbb.mongo
 .catch((error) => console.log(error))
 
 const __dirname = path.resolve();
+server.listen(4000,()=> {
+    console.log("server is runing")
+}) 
 
 
 
@@ -43,14 +46,9 @@ app.use("/api/coment",ComentUser)
 app.use("/api/select",SelecUser)
 
 
-app.use(express.static(path.join(__dirname, '/client/dist')));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
-  });
 
 
-const server = http.createServer(app);
+
 
 const io = new Server(server, {
     cors: '*', 
@@ -85,7 +83,12 @@ const io = new Server(server, {
   
   
   
+    app.use(express.static(path.join(__dirname, '/client/dist')));
 
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+      });
+    
 
   
   
@@ -100,10 +103,6 @@ const io = new Server(server, {
   
   
   
-  
-    server.listen(4000,() => {
-    console.log("server is runing")
-  })
 
 
 
