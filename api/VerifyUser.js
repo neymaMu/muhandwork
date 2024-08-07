@@ -7,7 +7,7 @@ import User from '../models/user.js';
 
 
 
-export const verifyToken = async (req, res, next) => {
+export const VerifyUser = async (req, res, next) => {
 	try {
 		const token = req.cookies.access_token;
 
