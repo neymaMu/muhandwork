@@ -16,7 +16,7 @@ import SelecUser from './routes/select.js'
 import path from 'path'
 
 
-const server = http.createServer(app);
+
 
 const app = express()
 
@@ -24,7 +24,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors({origin:"http://localhost:5173",credentials:true}));
 
-
+const server = http.createServer(app);
 
 
 
