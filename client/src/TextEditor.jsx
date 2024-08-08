@@ -6,12 +6,13 @@ import{io} from 'socket.io-client'
 import{useParams} from 'react-router-dom'
 import Coment from './componets/Coment'
 import{UserContext} from './context/UserContext'
-
+import './node_modules/quill-comment/quill.comment.js';
 
 
 const SAVE_INTERVAL_MS = 2000
 
 const TOOLBAR_OPTIONS = [
+ 
     [{ header: [1, 2, 3, 4, 5, 6, false] }],
     [{ font: [] }],
     [{ list: "ordered" }, { list: "bullet" }],
@@ -38,7 +39,7 @@ const TextEditor = () => {
    
    
   useEffect(() => {
-    const s = io("https://muhandwork.onrender.com",{transports: ['websocket'],})
+    const s = io("http://localhost:4000",{transports: ['websocket'],})
      setSocket(s)
      
      return () => {
@@ -156,8 +157,9 @@ wrapper.innerHTML =""
    setQuill(q)
   },[])
 
-
  
+  
+  
 
   
  
@@ -237,7 +239,7 @@ wrapper.innerHTML =""
   
   
   <div className="container" ref={wrapperRef}>
-
+  
       </div>
   
   <div className="w-full">
@@ -254,6 +256,7 @@ wrapper.innerHTML =""
    
  
     
+ 
    
          
   </div>
@@ -263,8 +266,7 @@ wrapper.innerHTML =""
  
 
   
-   
-   
+
    
    
    
