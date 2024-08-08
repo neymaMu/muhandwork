@@ -99,7 +99,7 @@ const Coment = ({newpo,setNewpo}) => {
 
 return (
    
-   <div className="flex w-[300px] mt-10 flex-col fixed space-y-5 ">
+   <div className="flex w-[300px] mt-10 flex-col fixed space-y-2 ">
    
  
 
@@ -184,7 +184,7 @@ return (
   
   
   
-   <div className="w-[330px] mt-[10px] ">
+   <div className="w-[330px]  ">
   
 
    
