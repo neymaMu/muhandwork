@@ -99,7 +99,7 @@ const Coment = ({newpo,setNewpo}) => {
 
 return (
    
-   <div className="flex w-[300px] mt-10 flex-col fixed space-y-2 ">
+   <div className="flex w-[300px] mt-10 gap-5  fixed space-y-2 ">
    
  
 
@@ -118,17 +118,7 @@ return (
 
 <div className=" ">
 
-
-
-
 {newpo.select  &&<form className='  rounded-md p-3' onSubmit={handleSubmit}>
-
-
-
-
-
-
-
 
 
 <div className="flex bg-blue-800 mt-[5px] rounded-lg flex-col ">
@@ -172,9 +162,9 @@ return (
 
  
   
+ 
   
-  
-  
+
   
   
   
@@ -194,12 +184,12 @@ return (
    
 
    
-  
+
    
    
    
    
-   <div >
+ 
     
     
       
@@ -210,7 +200,7 @@ return (
     
       </div>
     
-    </div>
+  
   )
 }
 
