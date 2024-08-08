@@ -26,7 +26,7 @@ app.use(cors({origin:"https://muhandwork.onrender.com",credentials:true}));
 app.use(cookieParser())
 const server = http.createServer(app);
 
-
+const defaultValue = ""
 
 
 
@@ -51,7 +51,7 @@ app.use("/api/select",SelecUser)
 
 
 const io = new Server(server, {
-    cors: 'https://muhandwork.onrender.com', 
+    cors: '', 
   });
 
   
@@ -87,7 +87,10 @@ const io = new Server(server, {
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
-});
+}); 
+
+
+server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
     
 
   
