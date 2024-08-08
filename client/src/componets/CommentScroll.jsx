@@ -42,7 +42,7 @@ const CommentScroll = () => {
    
    
       return (
-    <div className="border mt-20 px-4 flex-1 overflow-auto h-80 space-y-5 rounded-xl    border-1 border-green-500">
+    <div className="border mt-10 px-4 flex-1 overflow-auto h-80 space-y-5 rounded-xl    border-1 border-green-500">
       {comments.map((comen,index) => (
      
         <ComentPage key={index} comen={comen} />
