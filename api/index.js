@@ -27,7 +27,7 @@ app.use(cookieParser())
 const server = http.createServer(app);
 
 const defaultValue = ""
-
+const PORT = 4000
 
 
 mongoose.connect("mongodb+srv://j4116507:0JWcQEPTfu0yxQxP@cluster0.nfqnxbb.mongodb.net/")
