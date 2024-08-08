@@ -23,7 +23,8 @@ const Coment = ({newpo,setNewpo}) => {
  
 
 
-
+const select = newpo.select
+console.log(select)
 
 
   
@@ -32,9 +33,7 @@ const Coment = ({newpo,setNewpo}) => {
   const handleSubmit = async(e) => {
     e.preventDefault() 
 
-    if(comment.length >  200){
-     return
-    }
+   
      
     try{
      const res = await fetch(`https://muhandwork.onrender.com/api/coment/create`,{
@@ -46,7 +45,7 @@ const Coment = ({newpo,setNewpo}) => {
          'x-auth-token': "JWT_SECRET",
        },
       
-       body:JSON.stringify({content:comment,userId:user._id,username:user.username,profilePicture:user.profilePicture})
+       body:JSON.stringify({select:select,content:comment,userId:user._id,username:user.username,profilePicture:user.profilePicture})
       })
      
      

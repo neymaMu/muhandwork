@@ -6,11 +6,11 @@ export const createComent =async (req,res) => {
 
     try{
    
-        const{content,userId,username,profilePicture} = req.body 
+        const{select,content,userId,username,profilePicture} = req.body 
 
         
 
-     const Newcoment = new Comment({content,userId,username,profilePicture})
+     const Newcoment = new Comment({select,content,userId,username,profilePicture})
     
       await Newcoment.save()
 

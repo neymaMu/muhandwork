@@ -26,9 +26,31 @@ const ComentPage = ({comen}) => {
 <div   className="text-gray-500">@{comen.username}</div>
 </div>
 
+<div className="flex flex-col">
+  
+  
+  <div className="flex items-center gap-1">
+  <p className="font-bold text-sm">Selected Text :</p><p className="text-red-500">{comen.select}</p>
+  </div>
+  
 
 
-<p   className="break-all text-blue-800">{comen.content}</p>
+
+<div className="flex items-center gap-1">
+<p className="font-bold text-sm">Change To :</p> <p className="break-all text-blue-800">
+
+{comen.content}
+
+</p>
+
+</div>
+
+
+
+
+</div>
+
+
 
 
 

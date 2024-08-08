@@ -24,6 +24,9 @@ const ComentSchema = new mongoose.Schema({
     profilePicture:{
         type:String,
     
+    },
+    select:{
+        type:String,
     }
 
 

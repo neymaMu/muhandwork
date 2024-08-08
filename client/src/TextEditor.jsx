@@ -6,7 +6,7 @@ import{io} from 'socket.io-client'
 import{useParams} from 'react-router-dom'
 import Coment from './componets/Coment'
 import{UserContext} from './context/UserContext'
-import './node_modules/quill-comment/quill.comment.js';
+
 
 
 const SAVE_INTERVAL_MS = 2000
@@ -39,7 +39,7 @@ const TextEditor = () => {
    
    
   useEffect(() => {
-    const s = io("http://localhost:4000",{transports: ['websocket'],})
+    const s = io("https://muhandwork.onrender.com",{transports: ['websocket'],})
      setSocket(s)
      
      return () => {
