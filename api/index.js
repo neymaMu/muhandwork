@@ -51,7 +51,7 @@ app.use("/api/select",SelecUser)
 
 
 const io = new Server(server, {
-    cors: '', 
+    cors: '*', 
   });
 
   
