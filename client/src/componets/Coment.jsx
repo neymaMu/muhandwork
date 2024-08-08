@@ -118,7 +118,7 @@ return (
 
 <div className=" ">
 
-<div></div>
+
 
 
 {newpo.select  &&<form className='  rounded-md p-3' onSubmit={handleSubmit}>
@@ -131,7 +131,7 @@ return (
 
 
 
-<div className="flex bg-blue-800 mt-[10px] rounded-lg flex-col ">
+<div className="flex bg-blue-800 mt-[5px] rounded-lg flex-col ">
 
 
 <button type="submit" className="flex justify-end">
